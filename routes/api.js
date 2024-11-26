@@ -13,8 +13,8 @@ router.get('/biblioteca', async function(req, res, next) {
     biblioteca = biblioteca.map(biblioteca => {
         if(biblioteca.img_id){
             const imagen = cloudinary.url(biblioteca.img_id, {
-                width: 960,
-                height: 200,
+                width: 100,
+                height: 100,
                 crop: 'fill'
             });
             return {
@@ -38,8 +38,8 @@ router.get('/novedades', async function(req, res, next) {
     novedades = novedades.map(novedades => {
         if(novedades.img_id){
             const imagen = cloudinary.url(novedades.img_id, {
-                width: 960,
-                height: 200,
+                width: 100,
+                height: 100,
                 crop: 'fill'
             });
             return {
@@ -63,8 +63,8 @@ router.get('/staff', async function(req, res, next) {
     staff = staff.map(staff => {
         if(staff.img_id){
             const imagen = cloudinary.url(staff.img_id, {
-                width: 960,
-                height: 200,
+                width: 100,
+                height: 100,
                 crop: 'fill'
             });
             return {
